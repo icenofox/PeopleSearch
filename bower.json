@@ -1,0 +1,21 @@
+{
+  "name": "AMP code test",
+  "version": "0.0.0",
+  "authors": [
+    "Martin Chen"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jQuery":"~1.11.0",
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "bootstrap-sass": "~3.3.3"
+  }
+}

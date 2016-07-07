@@ -1,0 +1,24 @@
+<div class="container borderColor containerAlign" ng-init="vm.initData()">
+    <h1>People search</h1>
+    <div class="search-box row form-group mt">
+        <div class="col-xs-12">
+            <label for="search-term" class="sr-only">Search term</label>
+            <input class="form-control input-lg" id="search-term" type="text" placeholder="enter your search term" ng-model="vm.searchCriteria"
+                ng-keyup="vm.filterQuery()" />
+            <i class="glyphicon glyphicon-remove pull-right" id="removeIcon" ng-click="vm.removeSearchCriteria()"></i>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-4 iconsDiv" ng-repeat="people in vm.peoples | searchFilter:vm.searchCriteria">
+            <div class="thumbnail">
+                <img ng-attr-src="{{people.picture}}" alt="Avatar of {{people.firstName}} {{people.lastName}}" />
+
+                <div class="text-center">
+                    <h3 class="name">{{people.firstName}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
